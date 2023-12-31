@@ -299,7 +299,9 @@
 > #### 2023年10月2日
 
 个人感觉原本的好友展示只能展示一些人，可能支持我到现在的兄弟们还有好多，不如换一个布局：
-![更换前](https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/toufa/README/2023n6y24r2.png)
+![更换前](https://yh-1303099773.cos.accelerate.myqcloud.com/SY/toufa/README/2023n10y1r.png)
+
+![更换后](https://yh-1303099773.cos.accelerate.myqcloud.com/SY/toufa/README/2023n10y1r2.png)
 
 > #### 2023年12月31日
 
