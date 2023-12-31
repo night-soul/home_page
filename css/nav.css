@@ -1,0 +1,172 @@
+body .shell-main {
+  
+  width: 100%;
+  height: auto;
+  position: relative;
+  transition: .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+
+body .shell-main-nav {
+  width: 100%;
+  height: 70px;
+  position: sticky;
+  z-index: 999;
+  top: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20vh;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(13px);
+  font: 120 25px 'font-R';
+}
+
+body .shell-main-nav .logo {
+  width: 145px;
+  height: 100%;
+  position: absolute;
+  left: 5%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+body .shell-main-nav .logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 10%;
+}
+
+body .shell-main-nav .logo span {
+  font: 100 35px 'font';
+  letter-spacing: 5px;
+  color: #ffffff;
+  letter-spacing: 10px;
+  /* 兼容Webkit(Chrome/Safari)内核浏览器的写法 */
+  -webkit-text-stroke: 1.5px #ff7b00;
+
+}
+
+body .shell-main-nav ul {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+}
+
+body .shell-main-nav ul .nav-box {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 115px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: rgb(255, 102, 0);
+  z-index: -999;
+  transition: .5s;
+}
+
+body .shell-main-nav ul li {
+  width: 150px;
+  text-align: center;
+}
+
+body .shell-main-nav ul li a {
+  color: #000;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+}
+
+body .shell-main-nav ul li:nth-child(1):hover~.nav-box {
+  left: 20px;
+  background-color: rgb(255, 102, 0);
+}
+
+body .shell-main-nav ul li:nth-child(2):hover~.nav-box {
+  left: 170px;
+  background-color: rgb(255, 102, 0);
+}
+
+body .shell-main-nav ul li:nth-child(3):hover~.nav-box {
+  left: 315px;
+  background-color: rgb(255, 102, 0);
+}
+
+body .shell-main-nav ul li:nth-child(4):hover~.nav-box {
+  left: 465px;
+  background-color: rgb(255, 102, 0);
+}
+
+/* 修改滚动条的颜色 */
+::-webkit-scrollbar {
+  width: 12px; /* 设置滚动条的宽度 */
+  background-color: #333; /* 设置滚动条的背景颜色 */
+}
+
+/* 修改滚动条滑块的样式 */
+::-webkit-scrollbar-thumb {
+  background-color: #666; /* 设置滚动条滑块的颜色 */
+  border-radius: 6px; /* 设置滚动条滑块的圆角 */
+}
+
+/* 修改滚动条滑块在hover状态下的样式 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999; /* 设置滚动条滑块在hover状态下的颜色 */
+}
+
+/* 修改滚动条轨道的样式 */
+::-webkit-scrollbar-track {
+  background-color: #222; /* 设置滚动条轨道的颜色 */
+}
+
+/* 修改滚动条轨道在hover状态下的样式 */
+::-webkit-scrollbar-track:hover {
+  background-color: #333; /* 设置滚动条轨道在hover状态下的颜色 */
+}
+
+
+
+/* media */
+@media (max-width:768px) {
+  body .shell-main-nav ul {
+    transform: scale(.7);
+    right: -60px;
+    top: 2px;
+  }
+  body .shell-main-nav ul {
+    transform: scale(.6);
+    right: -120px;
+  }
+  .shell-main-footer span{
+    font: 120 15px 'font-R';
+  }
+  .shell-main-footer a{
+    font: 120 15px 'font-R';
+  }
+}
+
+@media (max-width:600px) {
+  body .shell-main-nav .logo {
+    display: none;
+  }
+  body .shell-main-nav ul {
+    transform: scale(.6);
+    right: -120px;
+  }
+  .shell-main-footer span{
+    font: 120 15px 'font-R';
+  }
+  .shell-main-footer a{
+    font: 120 15px 'font-R';
+  }
+}
+

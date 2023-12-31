@@ -1,0 +1,1032 @@
+/* 开头背景颜色 */
+body .shell-top {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
+  position: absolute;
+  transition: .2s;
+  overflow: hidden;
+}
+
+body .shell-top video {
+  width: 100%;
+}
+
+/* 开头图片的大小 */
+body .shell-top .background-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 开头圆角矩形背景 */
+body .shell-top .word {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 300px;
+  border: solid 15px rgba(255, 255, 255, 0.199);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 开头文字 */
+body .shell-top .word h2 {
+  font: 100 70px 'font';
+  margin-left: 20px;
+  background: -webkit-linear-gradient(#00D1FE, #4898FD);
+  /* 设置渐变背景 */
+  -webkit-background-clip: text;
+  /* 裁剪背景到文字 */
+  -webkit-text-fill-color: transparent;
+  /* 使文字透明 */
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  /* 设置黑色描边 */
+}
+
+body .shell-top .word h3 {
+  font: 100 70px 'font';
+  margin-left: 20px;
+  background: -webkit-linear-gradient(#FDD645, #FF9B59);
+  /* 设置渐变背景 */
+  -webkit-background-clip: text;
+  /* 裁剪背景到文字 */
+  -webkit-text-fill-color: transparent;
+  /* 使文字透明 */
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  /* 设置黑色描边 */
+}
+
+
+/* 向下滑动提示 */
+.scroll-down {
+  animation: bounce 2s infinite;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+
+}
+
+/* 向下滑动动画效果 */
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+
+
+body .shell-main {
+  width: 100%;
+  height: auto;
+  top: 100vh;
+  position: relative;
+  transition: .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+/* 上面的竖背景条 */
+body .shell-main::before {
+  content: '';
+  width: 250px;
+  height: 50%;
+  background-image: linear-gradient(to bottom, #f09819, #edde5d);
+  position: absolute;
+  transform: translate(-145%, 0);
+  z-index: -999;
+  bottom: 0;
+}
+
+/* 下面的竖背景条 */
+body .shell-main::after {
+  content: '';
+  width: 250px;
+  height: 50%;
+  background-image: linear-gradient(to bottom, #fccf31, #f55555);
+  position: absolute;
+  transform: translate(145%);
+  z-index: -999;
+}
+
+/* 菜单条 */
+body .shell-main-nav {
+  width: 100%;
+  height: 70px;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 18vh;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(13px);
+  font: 120 25px 'font-R';
+
+}
+
+/* 菜单条的头像 */
+body .shell-main-nav .logo {
+  width: 145px;
+  height: 100%;
+  position: absolute;
+  left: 5%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+body .shell-main-nav .logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 10%;
+}
+
+/* 菜单条头像的文字 */
+body .shell-main-nav .logo span {
+  font: 100 35px 'font';
+  letter-spacing: 5px;
+  color: #ffffff;
+  letter-spacing: 10px;
+  /* 兼容Webkit(Chrome/Safari)内核浏览器的写法 */
+  -webkit-text-stroke: 1.5px #ff7b00;
+}
+
+/* 菜单条选项的文字 */
+body .shell-main-nav ul {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+
+}
+
+/* 菜单条选项的盒子 */
+body .shell-main-nav ul .nav-box {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 115px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: rgb(255, 102, 0);
+  z-index: -999;
+  transition: .5s;
+}
+body .shell-main-nav ul .nav-box {
+  left: 20px;
+}
+
+
+body .shell-main-nav ul li {
+  width: 150px;
+  text-align: center;
+
+}
+
+body .shell-main-nav ul li a {
+  color: #000;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+
+}
+
+body .shell-main-nav ul li:nth-child(2):hover~.nav-box {
+  left: 170px;
+  background-color: rgb(255, 102, 0);
+}
+
+body .shell-main-nav ul li:nth-child(3):hover~.nav-box {
+  left: 315px;
+  background-color: rgb(255, 102, 0);
+}
+
+body .shell-main-nav ul li:nth-child(4):hover~.nav-box {
+  left: 465px;
+  background-color: rgb(255, 102, 0);
+}
+
+/* 我们的说明 下面颜色为最后面的背景*/
+body .shell-main-lbt {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  background-color: #fff;
+  margin-bottom: 150px;
+  overflow: hidden;
+  background-image: url("https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E9%98%BF%E9%AD%82%20%E7%99%BD.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
+
+body .shell-main-lbt .images {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  transition: .2s;
+}
+
+body .shell-main-lbt .images .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 我们的介绍的亚克力背景图 */
+body .shell-main-lbt .images .img .shell-main-lbt-word {
+  width: 600px;
+  overflow-x: hidden;
+  height: 300px;
+  background: linear-gradient (to right bottom, rgba(218, 149, 23, 0.5), rgba(255, 255, 255, 0.2), rgba(255, 167, 81, 0.3));
+  border: solid 15px rgba(212, 113, 31, 0.199);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(400px);
+  transition: .5s;
+}
+
+body .shell-main-lbt .images .img .shell-main-lbt-word h2 {
+  font: 400 32px 'font';
+  transition: .6s;
+  transition-delay: .4s;
+  transform: translate(520px);
+
+}
+
+/* 我们的介绍上面的文字 */
+body .shell-main-lbt .images .img .shell-main-lbt-word span {
+  color: #3a3a3a;
+  transition: .6s;
+  transition-delay: .4s;
+  transform: translate(-620px);
+}
+
+body .shell-main-lbt .min-images {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 20px;
+  width: 40%;
+  z-index: 999;
+  right: 10%;
+}
+
+body .shell-main-lbt .button {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+/* 我们的介绍切换按钮的背景 */
+body .shell-main-lbt .button .button-left,
+body .shell-main-lbt .button .button-right {
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0 20px;
+  cursor: pointer;
+  line-height: 500px;
+}
+
+/* 我们带图介绍 第一个是px是边框大小 */
+body .shell-main-header {
+  width: 90%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+  margin-bottom: 150px;
+}
+
+/* 大图旁边的背景板（上面是阴影 下面是填充） */
+body .shell-main-header-left {
+  width: 60%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(255, 136, 0, 0.5);
+  background-color: white;
+  overflow: hidden;
+}
+
+/* 大图旁边文字上面的装饰横条 */
+body .shell-main-header-left::after {
+  content: '';
+  width: 200px;
+  height: 15px;
+  background-color: #ffee6f;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 大图旁边文字的背景动态图形 */
+body .shell-main-header-left::before {
+  content: '';
+  width: 250px;
+  height: 250px;
+  border: 20px solid #ffee6f;
+  position: absolute;
+  bottom: -30px;
+  left: -140px;
+  border-radius: 10px;
+  transform: rotate(30deg);
+  animation: transform 4s infinite;
+}
+
+@keyframes transform {
+  0% {
+    transform: rotate(30deg) translate(0);
+  }
+
+  50% {
+    transform: rotate(40deg) translate(10px);
+  }
+
+  100% {
+    transform: rotate(30deg) translate(0px);
+  }
+}
+
+body .shell-main-header-left-footer {
+  position: relative;
+  width: 80%;
+  margin-top: 40px;
+  transform: translateY(400px);
+  opacity: 0;
+  transition: .9s;
+  transition-delay: .3s;
+}
+
+body .shell-main-header-left-footer p {
+  position: absolute;
+  display: block;
+  right: 0;
+}
+
+body .shell-main-header-left-top {
+  display: flex;
+  position: relative;
+  width: 85%;
+  transform: translateY(400px);
+  opacity: 0;
+  transition: .8s;
+}
+
+/* 大图左边的大字（上为填充色 下为描边色） */
+body .shell-main-header-left-top h2 {
+  font-size: 88px;
+  transform: translateY(-20px);
+  background: -webkit-linear-gradient(#FDD645, #FF9B59);
+  /* 设置渐变背景 */
+  -webkit-background-clip: text;
+  /* 裁剪背景到文字 */
+  -webkit-text-fill-color: transparent;
+  /* 使文字透明 */
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  /* 设置黑色描边 */
+}
+
+/* 大图左边的小字（上为填充色 下为描边色） */
+body .shell-main-header-left-top span {
+  font: 600 40px '';
+  margin-left: 20px;
+  background: -webkit-linear-gradient(#00D1FE, #4898FD);
+  /* 设置渐变背景 */
+  -webkit-background-clip: text;
+  /* 裁剪背景到文字 */
+  -webkit-text-fill-color: transparent;
+  /* 使文字透明 */
+  -webkit-text-stroke: 0.5px black;
+  /* 设置黑色描边 */
+  text-shadow: -2px -2px 0 white；
+    /* 设置白色描边 */
+
+}
+
+
+body .shell-main-header-left-bottom {
+  width: 85%;
+  height: auto;
+  transform: translateY(400px);
+  transition: .8s;
+  transition-delay: .2s;
+  font-size: 20px;
+  color: #000;
+}
+
+/* 大图以及边框 */
+body .shell-main-header-right {
+  width: 40%;
+  height: 95%;
+  background-size: cover;
+  background-image: url("https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/top.png");
+  border: 5px solid #5a2121;
+}
+
+        /* 粉丝图集 */
+        body .shell-main-content {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: auto;
+          padding: 20px 0;
+          margin-bottom: 100px;
+          overflow: hidden;
+      }
+
+      /* 粉丝画像集背景 */
+      body .shell-main-content-left {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          background-color: #00aeec;
+          display: flex;
+          justify-content: space-around;
+          padding: 0 50px;
+          position: relative;
+          flex-wrap: wrap;
+          align-content: center;
+          flex-direction: row;
+          align-items: center;
+      }
+
+      /* 粉丝图集下面的装饰条 */
+      body .shell-main-content-left::before {
+          content: '';
+          width: 200px;
+          height: 20px;
+          background-color: #dd7928;
+          position: absolute;
+          bottom: -30px;
+          right: 0;
+      }
+
+      /* 粉丝图集的字 */
+      body .shell-main-content-left h2 {
+          font-size: 40px;
+          color: #ffffff;
+          letter-spacing: 10px;
+      }
+
+      body .shell-main-content-left-fans {
+          width: 300px;
+          height: 300px;
+          transform: scale(0.9);
+      }
+
+      body .shell-main-content-left-fans ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: column-reverse;
+      }
+
+      body .shell-main-content-left-fans ul li {
+          width: 90px;
+          height: 90px;
+          background-color: #ffffff;
+          border-radius: 50%;
+          overflow: hidden;
+          border: solid 3px rgb(255, 255, 255);
+          position: relative;
+      }
+      
+      body .shell-main-content-left-fans ul li:hover img {
+          filter: brightness(0.3);
+      }
+
+      body .shell-main-content-left-fans ul li .image-wrapper {
+          position: relative;
+      }
+
+      body .shell-main-content-left-fans ul li .image-wrapper span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 16px;
+          color: #ffffff;
+          opacity: 0;
+          transition: opacity 0.3s;
+          text-align: center;
+          word-break: break-word;
+          font-family: 'font';
+      }
+
+      body .shell-main-content-left-fans ul li:hover .image-wrapper span {
+          opacity: 1;
+      }
+
+      body .shell-main-content-left-fans ul li img {
+          width: 100%;
+          transition: .2s;
+      }
+
+
+
+
+
+      /* 设置.box的宽度为视口宽度，高度为视口高度，相对定位，显示为flex布局， 
+      溢出隐藏 */
+      .bbox {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+    }
+
+    /* 设置.box-block的绝对定位，顶部和左侧均为0，宽度和高度为100%， 
+    背景尺寸为120%，背景不重复，背景位置为中心顶部，使用3D变换， 
+    will-change属性为background-position */
+    .bbox-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-position: center 0;
+        transform: translate3d(0, 0, 0);
+        will-change: background-position;
+    }
+
+
+    /* 设置.box-block的伪元素::before的绝对定位，顶部和左侧均为0，内容为空， 
+    显示为块级元素， 宽度和高度为100%，背景颜色为rgba(0, 0, 0, 0.35)， 
+    背景颜色的过渡效果为0.3秒的ease过渡 */
+    .bbox-block::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.35);
+        transition: background-color 0.3s ease;
+    }
+
+    /* 当鼠标悬停在.box上时，将.box-block的伪元素::before的 
+    背景颜色设置为rgba(0, 0, 0, 0.2) */
+    .bbox:hover .bbox-block::before {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* 设置.box-text的相对定位，宽度和高度为100%，显示为flex布局， 
+    垂直居中和水平居中，主轴为纵向 */
+    .bbox-text {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: 'font';
+        color: #F1F1F1;
+    }
+
+    /* 设置.box-text内的.text-title的字体大小为24px， 
+    底部外边距为20px */
+    .bbox-text .text-title {
+        font-size: 100px;
+        margin-bottom: 50px;
+    }
+
+    .bbox:nth-child(1n) .bbox-block {
+      background-image: url('https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/QQ.png');
+    }
+
+
+    .bbox:nth-child(3n) .bbox-block {
+      background-image: url('https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/GitHub.png');
+    }
+
+
+    .bbox:nth-child(5n) .bbox-block {
+        background-image: url('https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E6%89%8B%E6%9C%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png');
+    }
+
+
+/* 分支展示内容 */
+body .shell-main-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 510px;
+  flex-direction: column;
+  margin: 200px;
+}
+
+body .shell-main-bottom h2 {
+  font: 100 40px 'font';
+  letter-spacing: 5px;
+  margin-left: 100px;
+  background: -webkit-linear-gradient(#00D1FE, #4898FD);
+  /* 设置渐变背景 */
+  -webkit-background-clip: text;
+  /* 裁剪背景到文字 */
+  -webkit-text-fill-color: transparent;
+  /* 使文字透明 */
+  -webkit-text-stroke: 0.3px rgb(0, 0, 0);
+  /* 设置黑色描边 */
+}
+
+body .shell-main-bottom h2 span {
+  font-size: 80px;
+}
+
+body .shell-main-bottom-bottom {
+  width: 100%;
+  height: auto;
+  padding: 20px 0 100px 0;
+  background: linear-gradient(to right bottom, #f2994a, #f2c94c);
+  backdrop-filter: blur(30px);
+  position: relative;
+}
+
+body .shell-main-bottom-bottom::before {
+  content: '';
+  width: 250px;
+  height: 250px;
+  border: 20px solid rgba(53, 87, 40, 0.3);
+  position: absolute;
+  border-radius: 10px;
+  right: 100px;
+  top: 100px;
+  transform: rotate(30deg) translate(-50%, -50%);
+  animation: transform 4s infinite;
+  opacity: 0.8;
+  z-index: -999;
+}
+
+/* 修改滚动条的颜色 */
+::-webkit-scrollbar {
+  width: 12px; /* 设置滚动条的宽度 */
+  background-color: #333; /* 设置滚动条的背景颜色 */
+}
+
+/* 修改滚动条滑块的样式 */
+::-webkit-scrollbar-thumb {
+  background-color: #666; /* 设置滚动条滑块的颜色 */
+  border-radius: 6px; /* 设置滚动条滑块的圆角 */
+}
+
+/* 修改滚动条滑块在hover状态下的样式 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999; /* 设置滚动条滑块在hover状态下的颜色 */
+}
+
+/* 修改滚动条轨道的样式 */
+::-webkit-scrollbar-track {
+  background-color: #222; /* 设置滚动条轨道的颜色 */
+}
+
+/* 修改滚动条轨道在hover状态下的样式 */
+::-webkit-scrollbar-track:hover {
+  background-color: #333; /* 设置滚动条轨道在hover状态下的颜色 */
+}
+
+@keyframes transform {
+  0% {
+    transform: rotate(30deg);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+body .shell-main-bottom-bottom ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+body .shell-main-bottom-bottom ul li {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 12px solid rgba(165, 24, 24, 0.2);
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  transition: .3s;
+  margin-bottom: 100px;
+}
+
+body .shell-main-bottom-bottom ul li span {
+  font-size: 10px;
+}
+
+body .shell-main-bottom-bottom ul li:hover {
+  padding: 2px;
+  margin: 8px;
+}
+
+body .shell-main-bottom-bottom ul li:hover h2 {
+  letter-spacing: 3px;
+}
+
+body .shell-main-bottom-bottom ul li img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* 详细字颜色 */
+body .shell-main-bottom-bottom ul li h2 {
+  margin: 30px 0 10px 0;
+  font-size: 27px;
+  transition: .3s;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+body .shell-main-bottom-bottom ul li span {
+  font-size: 15px;
+  text-align: center;
+
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+
+
+  
+  body .shell-top .word {
+    width: 80%;
+    height: 500px;
+  }
+
+  body .shell-top .word h2 {
+    font-size: 40px;
+  }
+
+  body .shell-top .word h3 {
+    font: 100 100px 'font';
+  }
+
+  body .shell-main::after {
+    transform: translate(0);
+  }
+
+  body .shell-main::before {
+    transform: translate(0);
+  }
+
+  .shell-top {
+    display: flex;
+  }
+
+  body .shell-main-nav ul {
+    transform: scale(.7);
+    right: -60px;
+    top: 2px;
+  }
+
+  body .shell-main-lbt .button {
+    height: 200px;
+  }
+
+  body .shell-main-lbt .button .button-left,
+  body .shell-main-lbt .button .button-right {
+    line-height: 200px;
+  }
+
+  body .shell-main-header {
+    flex-wrap: wrap;
+    height: 1400px;
+  }
+
+  body .shell-main-header-left {
+    height: 70%;
+    width: 100%;
+  }
+
+  body .shell-main-header-right {
+    width: 100%;
+    height: 30%;
+  }
+
+  body .shell-main-content {
+    flex-wrap: wrap;
+  }
+
+  body .shell-main-content-left {
+    width: 100%;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  body .shell-main-content-right {
+    width: 100%;
+  }
+
+  body .shell-main-bottom {
+    overflow: visible;
+    margin: 200px;
+  }
+
+  body .shell-main-bottom-bottom ul li {
+    width: 250px;
+    height: 250px;
+  }
+
+  body .shell-main-nav ul {
+    right: -120px;
+  }
+
+
+
+}
+
+@media (max-width:600px) {
+
+
+
+  body .shell-main-bottom {
+    margin: 600px 0;
+  }
+
+  body .shell-main-header {
+    height: 1200px;
+  }
+
+  body .shell-main-content-left h2 {
+    font-size: 30px;
+  }
+
+
+
+  body .shell-main-nav .logo {
+    display: none;
+  }
+
+  body .shell-main-nav ul {
+    transform: scale(.6);
+    right: -120px;
+  }
+
+  body .shell-top .word {
+    width: 80%;
+    height: 500px;
+  }
+
+  body .shell-top .word h2 {
+    font-size: 40px;
+  }
+
+  body .shell-top .word h3 {
+    font: 100 100px 'font';
+  }
+
+  body .shell-main-lbt .button .button-left,
+  body .shell-main-lbt .button .button-right {
+    width: 10px;
+    font-size: 20px;
+    opacity: .2;
+  }
+
+
+
+  body .shell-main-lbt {
+    height: 300px;
+  }
+}
+
+@media (min-width:1300px) {
+  body .shell-main-bottom {
+    margin: 0;
+  }
+
+}
+
+
+/* 切换按钮 */
+.switch {
+  visibility: hidden;
+  border: 1px solid #c4c7ce;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: fixed;
+  top: 85%;
+  right: 10%;
+  z-index: 9999;
+  /* 将z-index属性的值设置为9999 */
+  background-color: #fff;
+  /* 将背景颜色设置为白色 */
+
+}
+
+html,
+img {
+  transition: filter 0.5s ease-out;
+  filter: invert(0);
+}
+
+.dark html,
+.dark img {
+  filter: invert(1);
+}
+
+/* 滑块 */
+.switch::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #4e6ef2;
+  position: absolute;
+  left: 3px;
+  transition: 0.2s ease-out;
+
+}
+
+.switch.dark::before {
+  left: 63%;
+}
+
+/* 图标 */
+.switch .fa {
+  font-size: 18px;
+  color: #aaa;
+}
+
+
+
+

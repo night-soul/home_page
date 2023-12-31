@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿魂的藏宝阁</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <!-- 引入暗色模式图标库 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+    <style>
+        /* 背景 */
+        body {
+            font: 100 20px 'font-h';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ffe259, #ffa751);
+        }
+
+        body .shell-main-nav ul .nav-box {
+            left: 465px;
+        }
+
+        body {
+            background-color: rgb(248, 248, 248);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        body .shell-main-nav {
+            margin-bottom: 0;
+        }
+
+        /* 切换按钮 */
+        .switch {
+            border: 1px solid #c4c7ce;
+            width: 60px;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 6px;
+            border-radius: 15px;
+            cursor: pointer;
+            position: fixed;
+            top: 85%;
+            right: 10%;
+            z-index: 9999;
+            /* 将z-index属性的值设置为9999 */
+            background-color: #fff;
+            /* 将背景颜色设置为白色 */
+        }
+
+
+        /* 滑块 */
+        .switch::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #4e6ef2;
+            position: absolute;
+            left: 3px;
+            transition: 0.2s ease-out;
+
+        }
+
+        .switch.dark::before {
+            left: 63%;
+        }
+
+        /* 图标 */
+        .switch .fa {
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px 50px;
+            padding: 300px 20px;
+        }
+
+        .container .card {
+            position: relative;
+            width: 350px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 45px 80px rgba(0, 0, 0, .15);
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container .card:hover {
+            height: 400px;
+        }
+
+        .container .card .imgBox {
+            position: absolute;
+            top: 20px;
+            width: 300px;
+            height: 220px;
+            border-radius: 12px;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+
+        .container .card:hover .imgBox {
+            top: -100px;
+            scale: 0.75;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+        }
+
+        .container .card .imgBox img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container .card .content {
+            position: absolute;
+            top: 252px;
+            width: 100%;
+            padding: 0 30px;
+            height: 35px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .content {
+            top: 130px;
+            height: 250px;
+        }
+
+        .container .card .content h2 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--clr);
+        }
+
+        .container .card .content p {
+            color: #333;
+        }
+
+        .container .card .content a {
+            position: relative;
+            top: 15px;
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--clr);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 暗色模式 -->
+    <div class="switch">
+        <i class="fa fa-sun-o"></i>
+        <i class="fa fa-moon-o"></i>
+    </div>
+
+    <div class="shell">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/logo.jpg" alt="">
+                    <span>阿魂</span>
+                </div>
+                <ul>
+                    <li><a href="../">阿魂</a></li>
+                    <li><a href="https://bk.nitsol.xyz/">资源</a></li>
+                    <li><a href="../toufa">头发</a></li>
+                    <li><a href="./">宝藏</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+
+
+            <div class="container">
+
+
+
+
+
+                <div class="card" style="--clr: #03a9f4;">
+                    <div class="imgBox">
+                        <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/baozang/CSGO.png">
+                    </div>
+                    <div class="content">
+                        <h2>CSGO服务器</h2>
+                        <p>中国专用的CSGO服务器，服务器架设于中国河北，无需使用任何加速器即可畅联CSGO内战服务器</p>
+                        <a href="./csgo">走你</a>
+                    </div>
+                </div>
+
+
+                <div class="card" style="--clr: #db930e;">
+                    <div class="imgBox">
+                        <img
+                            src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/baozang/Minecraft.jpg">
+                    </div>
+                    <div class="content">
+                        <h2>我的世界服务器列表</h2>
+                        <p>阿魂开设的我的世界国际端（Minecraft）服务器，列表下载大全！！</p>
+                        <a href="./Minecraft/">走你</a>
+                    </div>
+                </div>
+
+
+                <div class="card" style="--clr: #1fdb0e;">
+                    <div class="imgBox">
+                        <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/baozang/GPTAI.png">
+                    </div>
+                    <div class="content">
+                        <h2>智魂AI</h2>
+                        <p>阿魂开设的商业向AI网站你可以问他任何问题，它总能轻而易举的回复你，并且可以使用Midjourney的AI绘画！快来试试吧！（免费赠送使用额度哦）</p>
+                        <a href="https://gptapp.nitsol.xyz/">走你</a>
+                    </div>
+                </div>
+
+
+                <div class="card" style="--clr: #00dfc8;">
+                    <div class="imgBox">
+                        <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/baozang/video.png">
+                    </div>
+                    <div class="content">
+                        <h2>智魂视频网</h2>
+                        <p>自由轻松观看电影、电视剧、动漫，图集等众多内容</p>
+                        <a href="https://sp.nitsol.xyz/">走你</a>
+                    </div>
+                </div>
+
+
+                <!-- 最下面 -->
+                <div class="shell-main-footer">
+                    <a href="https://space.bilibili.com/1079805307" title="点击跳转">阿魂のB站</a>
+                    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=yfOp97HkEl0QXv1bzSa0Zfj9UxIDD2Qz&authKey=Kc%2BzZ6fR7DyPP7fZ40Aic2zkuCA7fjD6UkVw5sdN4TtmX6XeMpSxZ8llfHBk5uva&noverify=0&group_code=658127651"
+                        title="点击跳转">阿魂のQ群</a>
+                    <a href="https://github.com/night-soul/shouye" title="点击跳转">阿魂の开源</a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <!-- 引用js -->
+    <script>
+
+        // 暗色模式
+        // 切换按钮
+        const btn = document.querySelector('.switch');
+
+        // 检测系统是否开启暗色模式
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // 系统开启了暗色模式，执行暗色模式的代码
+            btn.classList.add('dark');
+            let a = document.createElement('style');
+            a.id = 'aa';
+            a.innerHTML = '.container .card{background-color:#4d4d4d;} body {background: linear-gradient(48deg,#006da6,#ab6628);} .switch{background-color: #000;} .container .card .content p{color:#fff;} body .shell-main-nav {background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));} body .shell-main-nav ul li a {color: #fff;}body .shell-main-nav { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);}';
+            document.head.appendChild(a);
+        } else {
+            // 系统未开启暗色模式，执行默认模式的代码
+            btn.classList.remove('dark');
+            if (document.head.querySelector('#aa')) {
+                document.head.querySelector('#aa').remove();
+            }
+        }
+
+        btn.addEventListener('click', function () {
+            let is_dark = document.querySelector('.switch.dark');
+            if (!is_dark) {
+                // 切换为暗色主题
+                btn.classList.add('dark');
+                let a = document.createElement('style');
+                a.id = 'aa';
+                a.innerHTML = '.container .card{background-color:#4d4d4d;} body {background: linear-gradient(48deg,#006da6,#ab6628);} .switch{background-color: #000;} .container .card .content p{color:#fff;} body .shell-main-nav {background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));} body .shell-main-nav ul li a {color: #fff;}body .shell-main-nav {  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);}';
+                document.head.appendChild(a);
+            } else {
+                // 切换为亮色主题
+                btn.classList.remove('dark');
+                if (document.head.querySelector('#aa')) {
+                    document.head.querySelector('#aa').remove();
+                }
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>

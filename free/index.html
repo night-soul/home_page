@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿魂小窝</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <!-- 引入暗色模式图标库 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome">
+</head>
+
+<script type="text/javascript">
+    // 检测页面是否由电脑浏览器打开
+    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+        window.location.href = "../";
+    }
+
+    // 替换视频为图片
+    if (isMobileDevice()) {
+        var videoElement = document.querySelector('.background-video');
+        if (videoElement) {
+            var imageSrc = 'https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/qlogo.jpg';
+            var imageElement = document.createElement('img');
+            imageElement.src = imageSrc;
+            imageElement.classList.add('background-image');
+
+            videoElement.parentNode.replaceChild(imageElement, videoElement);
+        }
+    }
+</script>
+
+
+<body>
+    <!-- 暗色模式 -->
+    <div class="switch">
+        <i class="fa fa-sun-o"></i>
+        <i class="fa fa-moon-o"></i>
+    </div>
+    <div class="shell">
+        <div class="shell-top">
+            <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/qlogo.jpg"
+                class="background-image"></img>
+            <div class="word">
+                <h2>Welcome to</h2>
+                <h3>阿魂</h3>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>向下滑动</span>
+        </div>
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/logo.jpg" alt="">
+                    <span>阿魂</span>
+                </div>
+                <ul>
+                    <li><a href="./">阿魂</a></li>
+                    <li><a href="https://bk.nitsol.xyz/">资源</a></li>
+                    <li><a href="../toufa">头发</a></li>
+                    <li><a href="../baozang">宝藏</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+            <div class="shell-main-lbt">
+                <ui class="images">
+                    <li class="img">
+                        <div class="shell-main-lbt-word">
+                            <h2>这里是阿魂的快乐天堂</h2>
+                            <h2>尽量避免使用手机端打开网站，适配可能会有问题</h2><br />
+                            <span>本站是因阿魂练习静态html套用制作，主要方便个人，头顶导航栏包括主页、资源分享、程序员百科全书、衍生视频网，如果有其他建议可以联系B站UP：阿魂不在线
+                            </span>
+                        </div>
+                    </li>
+                    <li class="img">
+                        <div class="shell-main-lbt-word">
+                            <h2>这里是阿魂的快乐天堂</h2>
+                            <h2>网站自动检测您的系统是否为暗色模式，可在右下角开关</h2><br />
+                            <span>本站是因阿魂练习静态html套用制作，主要方便个人，头顶导航栏包括主页、资源分享、程序员百科全书、衍生视频网，本网站参考UP：山羊の前端小窝设计制作的，如带来不便，可以联系
+                            </span>
+                        </div>
+                    </li>
+                    <li class="img">
+                        <div class="shell-main-lbt-word">
+                            <h2>这里是阿魂的快乐天堂</h2>
+                            <h2>UP是高中生学者，如有建议，可以直接联系提出，万分感谢</h2><br />
+                            <span>本站是由阿魂练习静态html套用制作，主要方便个人，头顶导航栏包括主页、资源分享、程序员百科全书、衍生视频网，如果有其他建议可以联系B站UP：阿魂不在线
+                            </span>
+                        </div>
+                    </li>
+                </ui>
+                <ui class="min-images">
+                    <li class="min"></li>
+                    <li class="min"></li>
+                    <li class="min"></li>
+                </ui>
+                <div class="button">
+                    <div class="button-left">
+                    </div>
+                    <div class="button-right">></div>
+                </div>
+            </div>
+            <div class="shell-main-header">
+                <div class="shell-main-header-left">
+                    <div class="shell-main-header-left-top">
+                        <h2>这里</h2>
+                        <span>可以做到很多事情<br />是我们的天堂</span>
+                    </div>
+                    <div class="shell-main-header-left-bottom">
+                        <span>欢迎来到阿魂的快乐小窝，在这里，你可以了解我们，下载好用资源，学到有趣的知识，看到好看免费的视频，拿到属于自己的网盘<br />你能不需要这些，但别毁了这些</span><br /><br />
+                        <span style="font-family: font;">Welcome to Ah Hun's Happy Little Nest. Here, you can learn
+                            about us, download useful resources, learn interesting knowledge, watch beautiful and free
+                            videos, and get your own online drive<br /> You don't need these, but don't ruin them</span>
+                    </div>
+                    <div class="shell-main-header-left-footer">
+                        <p>-------阿魂</p>
+                    </div>
+                </div>
+                <div class="shell-main-header-right"></div>
+            </div>
+            <div class="shell-main-content">
+                <div class="shell-main-content-left">
+                    <h2>感谢<br />你们的陪伴</h2>
+                    <div class="shell-main-content-left-fans">
+                        <ul>
+                            <li><img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E8%80%81%E5%A9%86%20Q.png"
+                                    alt=""></li>
+                            <li><img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E5%8D%83%E7%A7%8B%E7%99%BD.png"
+                                    alt=""></li>
+                            <li><img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E5%94%90%E4%B9%8B%E6%A2%A6.png"
+                                    alt=""></li>
+                            <li><img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E8%90%BD%E6%AE%87.gif"
+                                    alt=""></li>
+                            <li><img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E8%8A%9D%E5%A6%B9.png"
+                                    alt=""></li>
+                            <li><img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E8%80%81%E5%86%B0%E6%A3%8D.png"
+                                    alt=""></li>
+                            <li><img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E7%9F%A5%E7%A7%8B.png"
+                                    alt=""></li>
+                            <li><img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E4%BA%8C%E7%8B%97%E5%AD%90.png"
+                                    alt=""></li>
+                            <li><span>•••
+                                </span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shell-main-content-right">
+                    <h2>常驻平台：Bilibili</h2>
+                    <span>以游戏视频带来快乐和资讯</span>
+                    <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E6%89%8B%E6%9C%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="shell-main-bottom">
+                <h2><span>主</span>要学习:</h2>
+                <div class="shell-main-bottom-bottom">
+                    <ul>
+                        <li>
+                            <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/wz.png" alt="">
+                            <h2>网页制作:</h2>
+                            <span>本人正在学习包括php、html、css、js、MySQL、IIS等开发源的网页制作</span>
+                        </li>
+                        <li>
+                            <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/PR.png" alt="">
+                            <h2>影视后期:</h2>
+                            <span>加固包括PR、AE、AU、PS、达芬奇、剪映的熟练度，已有显著成果</span>
+                        </li>
+                        <li>
+                            <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/UN.png" alt="">
+                            <h2>软件游戏开发:</h2>
+                            <span>正在学习C++、Python、VB、VF、Unity及其周边开发内容</span>
+                        </li>
+                        <li>
+                            <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/TU.jpg" alt="">
+                            <h2>本人高中生:</h2>
+                            <span>已经够累了，不学别的了</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 最下面 -->
+            <div class="shell-main-footer">
+                <a href="https://space.bilibili.com/1079805307" title="点击跳转">阿魂のB站</a>
+                <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=yfOp97HkEl0QXv1bzSa0Zfj9UxIDD2Qz&authKey=Kc%2BzZ6fR7DyPP7fZ40Aic2zkuCA7fjD6UkVw5sdN4TtmX6XeMpSxZ8llfHBk5uva&noverify=0&group_code=658127651"
+                    title="点击跳转">阿魂のQ群</a>
+                <a href="https://github.com/night-soul/shouye" title="点击跳转">阿魂の开源</a>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+<script>
+    // 检测设备类型
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+
+</script>
+<!-- 引入jquery -->
+<script src="../js/jquery-3.5.1.min.js"></script>
+<script>
+
+
+
+    window.addEventListener('scroll', function () {
+        let top = window.scrollY
+        if (top != 0) {
+            $('.shell-top').css('top', '-100vh')
+            $('.shell-main').css('top', '0')
+            $('.shell-main-lbt-word').css('transform', 'translateY(0px)')
+            $('.shell-main-lbt-word').css('backdrop-filter', 'blur(5px)')
+            $('.shell-main-lbt-word h2').css('transform', 'translate(0px)')
+            $('.shell-main-lbt-word span').css('transform', 'translate(0px)')
+
+        } else {
+            $('.shell-top').css('top', '0px')
+            $('.shell-main').css('top', '100vh')
+            $('.shell-main-lbt-word').css('transform', 'translateY(400px)')
+            $('.shell-main-lbt-word').css('backdrop-filter', 'blur(0px)')
+            $('.shell-main-lbt-word h2').css('transform', 'translate(520px)')
+            $('.shell-main-lbt-word span').css('transform', 'translate(-620px)')
+        }
+        if (top > 450) {
+            $('.shell-main-header-left-top').css('opacity', '1')
+            $('.shell-main-header-left-top').css('transform', 'translateY(0px)')
+            $('.shell-main-header-left-bottom').css('opacity', '1')
+            $('.shell-main-header-left-bottom').css('transform', 'translateY(0px)')
+            $('.shell-main-header-left-footer').css('opacity', '1')
+            $('.shell-main-header-left-footer').css('transform', 'translateY(0px)')
+        } else {
+            $('.shell-main-header-left-top').css('opacity', '0')
+            $('.shell-main-header-left-top').css('transform', 'translateY(400px)')
+            $('.shell-main-header-left-bottom').css('opacity', '0')
+            $('.shell-main-header-left-bottom').css('transform', 'translateY(400px)')
+            $('.shell-main-header-left-footer').css('opacity', '0')
+            $('.shell-main-header-left-footer').css('transform', 'translateY(400px)')
+        }
+    })
+    let left = document.querySelector(".button-left")
+    let right = document.querySelector(".button-right")
+    let min = document.querySelectorAll(".min")
+    let images = document.querySelector(".images")
+    let index = 0
+    let time
+    function position() {
+        images.style.left = (index * -100) + "%"
+    }
+    function add() {
+        if (index >= min.length - 1) {
+            index = 0
+        } else {
+            index++
+        }
+    }
+    function desc() {
+        if (index < 1) {
+            index = min.length - 1
+        } else {
+            index--
+        }
+    }
+
+    function timer() {
+        time = setInterval(() => {
+            index++
+            desc()
+            add()
+            position()
+        }, 34000)
+    }
+
+    left.addEventListener("click", () => {
+        desc()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    // 右边的按钮和左边也是差不多
+    right.addEventListener("click", () => {
+        add()
+        position()
+        clearInterval(time)
+        timer()
+    })
+
+    for (let i = 0; i < min.length; i++) {
+        min[i].addEventListener("click", () => {
+            index = i
+            position()
+            clearInterval(time)
+            timer()
+        })
+    }
+
+    timer()
+
+
+
+    // 暗色模式
+    // 切换按钮
+    const btn = document.querySelector('.switch');
+
+    // 检测系统是否开启暗色模式
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 系统开启了暗色模式，执行暗色模式的代码
+        btn.classList.add('dark');
+        let a = document.createElement('style');
+        a.id = 'aa';
+        a.innerHTML = 'html{background-color:#fff;} body .shell-main{background-color:#000;} body .shell-main-lbt {background-color: #000;background-image: url("https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E9%98%BF%E9%AD%82%20%E9%BB%91.gif");} body .shell-main-lbt .button .button-left,body .shell-main-lbt .button .button-right {background-color: rgba(0, 0, 0, 0.7);color: white;} body .shell-main-lbt .images .img .shell-main-lbt-word h2 {color: #fff;} body .shell-main-lbt .images .img .shell-main-lbt-word span {color: #fff;} body .shell-main-header-left-bottom {color: #fff;} body .shell-main-header-left {background-color: #000;} body .shell-main-content-left {background-color: #13799e;} body .shell-main-bottom-bottom {background: linear-gradient(to right bottom, #b8763c, #c0a03e);} body .shell-main-nav {box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));}body .shell-main-nav ul li a {color: #fff;}.switch{background-color: #000;} body .shell-main-header-right {background-image: url("https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/top2.png");}';
+        document.head.appendChild(a);
+    } else {
+        // 系统未开启暗色模式，执行默认模式的代码
+        btn.classList.remove('dark');
+        if (document.head.querySelector('#aa')) {
+            document.head.querySelector('#aa').remove();
+        }
+    }
+
+    btn.addEventListener('click', function () {
+        let is_dark = document.querySelector('.switch.dark');
+        if (!is_dark) {
+            // 切换为暗色主题
+            btn.classList.add('dark');
+            let a = document.createElement('style');
+            a.id = 'aa';
+            a.innerHTML = 'html{background-color:#fff;} body .shell-main{background-color:#000;} body .shell-main-lbt {background-color: #000;background-image: url("https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/%E9%98%BF%E9%AD%82%20%E9%BB%91.gif");} body .shell-main-lbt .button .button-left,body .shell-main-lbt .button .button-right {background-color: rgba(0, 0, 0, 0.7);color: white;} body .shell-main-lbt .images .img .shell-main-lbt-word h2 {color: #fff;} body .shell-main-lbt .images .img .shell-main-lbt-word span {color: #fff;} body .shell-main-header-left-bottom {color: #fff;} body .shell-main-header-left {background-color: #000;} body .shell-main-content-left {background-color: #13799e;} body .shell-main-bottom-bottom {background: linear-gradient(to right bottom, #b8763c, #c0a03e);} body .shell-main-nav {box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));}body .shell-main-nav ul li a {color: #fff;}.switch{background-color: #000;} body .shell-main-header-right {background-image: url("https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image/top2.png");}';
+            document.head.appendChild(a);
+        } else {
+            // 切换为亮色主题
+            btn.classList.remove('dark');
+            if (document.head.querySelector('#aa')) {
+                document.head.querySelector('#aa').remove();
+            }
+        }
+    })
+
+
+
+
+    window.onscroll = function () {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > 0) {
+            document.querySelector('.switch').style.visibility = 'visible';
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>阿魂的头发</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/docsify.css">
+    <!-- 引入暗色模式图标库 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        body .shell-main-nav ul .nav-box {
+            left: 315px;
+        }
+
+        body .shell-main {
+            margin-bottom: 0;
+
+        }
+
+        body .shell-main-nav {
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-bottom: 0;
+        }
+
+        /* 切换按钮 */
+        .switch {
+            border: 1px solid #c4c7ce;
+            width: 60px;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 6px;
+            border-radius: 15px;
+            cursor: pointer;
+            position: fixed;
+            top: 85%;
+            right: 1.9%;
+            z-index: 9999;
+            /* 将z-index属性的值设置为9999 */
+            background-color: #fff;
+            /* 将背景颜色设置为白色 */
+
+        }
+
+        html,
+        img {
+            transition: filter 0.5s ease-out;
+            filter: invert(0);
+        }
+
+        .dark html,
+        .dark img {
+            filter: invert(1);
+        }
+
+        /* 滑块 */
+        .switch::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #4e6ef2;
+            position: absolute;
+            left: 3px;
+            transition: 0.2s ease-out;
+
+        }
+
+        .switch.dark::before {
+            left: 54%;
+        }
+
+        /* 图标 */
+        .switch .fa {
+            font-size: 18px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 暗色模式 -->
+    <div class="switch">
+        <i class="fa fa-sun-o"></i>
+        <i class="fa fa-moon-o"></i>
+    </div>
+
+    <div class="shell">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="https://yh-1303099773.cos.ap-beijing.myqcloud.com/SY/image//logo.jpg" alt="">
+                    <span>阿魂</span>
+                </div>
+                <ul>
+                    <li><a href="../">阿魂</a></li>
+                    <li><a href="https://bk.nitsol.xyz/">资源</a></li>
+                    <li><a href="../toufa">头发</a></li>
+                    <li><a href="../baozang">宝藏</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="app">正在加载中..如果长时间未进入请用电脑web端进入</div>
+        <script>
+            window.$docsify = {
+                // 字数统计
+                count: {
+                    countable: true,
+                    fontsize: '0.9em',
+                    color: 'rgb(90,90,90)',
+                    language: 'chinese'
+                },
+                // 搜索功能
+                search: {
+                    maxAge: 86400000,
+                    noData: '啧，没找到，你打对了？',
+                    paths: 'auto',
+                    placeholder: '出大问题了？来搜搜',
+                },
+                // 多页多文件功能
+                loadSidebar: true,
+                // 显示目录级数
+                subMaxLevel: 3,
+                name: '',
+                repo: ''
+            }
+        </script>
+
+
+        <!-- Docsify v4 -->
+        <!-- 搜索 -->
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+        <!-- 多页多文件 -->
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+        <!-- 显示字数 -->
+        <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+        <!-- 复制到剪贴板 -->
+
+
+    </div>
+    <script>
+
+        // 暗色模式
+        // 切换按钮
+        const btn = document.querySelector('.switch');
+
+        // 检测系统是否开启暗色模式
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // 系统开启了暗色模式，执行暗色模式的代码
+            btn.classList.add('dark');
+            let a = document.createElement('style');
+            a.id = 'aa';
+            a.innerHTML = 'html{background-color:#fff;filter:invert(1);}img{filter:invert(1);}.shell-main-nav{filter:invert(1);}.logo{filter:invert(1);}.logo span{filter:invert(1);}.switch::before{filter:invert(1);} body .shell-main-nav {background: linear-gradient(to right bottom, rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0));}body .shell-main-nav ul li a {color: #fff;}';
+            document.head.appendChild(a);
+        } else {
+            // 系统未开启暗色模式，执行默认模式的代码
+            btn.classList.remove('dark');
+            if (document.head.querySelector('#aa')) {
+                document.head.querySelector('#aa').remove();
+            }
+        }
+
+        btn.addEventListener('click', function () {
+            let is_dark = document.querySelector('.switch.dark');
+            if (!is_dark) {
+                // 切换为暗色主题
+                btn.classList.add('dark');
+                let a = document.createElement('style');
+                a.id = 'aa';
+                a.innerHTML = 'html{background-color:#fff;filter:invert(1);}img{filter:invert(1);}.shell-main-nav{filter:invert(1);}.logo{filter:invert(1);}.logo span{filter:invert(1);}.switch::before{filter:invert(1);} body .shell-main-nav {background: linear-gradient(to right bottom, rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0));}body .shell-main-nav ul li a {color: #fff;}';
+                document.head.appendChild(a);
+            } else {
+                // 切换为亮色主题
+                btn.classList.remove('dark');
+                if (document.head.querySelector('#aa')) {
+                    document.head.querySelector('#aa').remove();
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
